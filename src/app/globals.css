@@ -1,0 +1,148 @@
+@import "tailwindcss";
+
+@theme {
+  --font-montserrat: var(--font-montserrat);
+  --font-roboto: var(--font-roboto);
+  --color-eerie-black: #161616;
+  --color-scarlet-red: #f52828;
+  --color-scarlet-red-rgb: 245, 40, 40;
+  --color-light-gray: #fafafa;
+  --color-medium-light-gray: #b1b1b1;
+  --color-amber-light: #ffdcdc4d;
+  --breakpoint-xs: 480px;
+}
+
+@layer utilities {
+  @keyframes typing {
+    0% {
+      width: 0%;
+      opacity: 1;
+    }
+    40% {
+      width: 100%;
+      opacity: 1;
+    }
+    60% {
+      width: 100%;
+      opacity: 1;
+    }
+    80% {
+      width: 0%;
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+  @keyframes blink {
+    0%,
+    100% {
+      border-color: transparent;
+    }
+    50% {
+      border-color: currentColor;
+    }
+  }
+
+  @keyframes rotate-phrases {
+    0%,
+    24.99% {
+      content: "What are you looking for?";
+    }
+    25%,
+    49.99% {
+      content: "Find the best deals...";
+    }
+    50%,
+    74.99% {
+      content: "Search by product name or image...";
+    }
+    75%,
+    100% {
+      content: "Looking for something specific?";
+    }
+  }
+
+  .animated-placeholder::after {
+    content: "What are you looking for?";
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+    border-right: 2px solid;
+    padding-right: 4px;
+    opacity: 0;
+    animation-name: rotate-phrases, typing, blink;
+    animation-duration: 24s, 6s, 1s;
+    animation-timing-function: linear, steps(50, end), step-end;
+    animation-iteration-count: infinite;
+    animation-delay: 0s, 0s, 0s;
+  }
+  .typing-disabled .animated-placeholder::after {
+    animation-play-state: paused;
+  }
+}
+
+@layer utilities {
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.3s ease-out both;
+  }
+
+  .shimmer {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .shimmer::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -150%;
+    width: 150%;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.2) 20%,
+      rgba(255, 255, 255, 0.5) 60%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    animation: shimmer 1.3s infinite;
+    animation-timing-function: ease-in-out;
+    filter: blur(4px);
+    transform: skewX(-10deg);
+  }
+
+  @keyframes shimmer {
+    0% {
+      left: -150%;
+    }
+    50% {
+      left: 100%;
+    }
+    100% {
+      left: 100%;
+    }
+  }
+}
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
