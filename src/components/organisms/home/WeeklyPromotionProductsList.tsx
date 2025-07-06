@@ -21,7 +21,7 @@ const WeeklyPromotionProductsList = ({ banners }: { banners: Banner[] }) => {
       <MaxWidthWrapper>
         <ContainerBox hasBackground={true} className="space-y-4">
           <div className="flex justify-between items-center font-montserrat font-semibold text-[#2E2C2C]">
-            <Heading>Weekly promotion</Heading>
+            <Heading>Weekly Sustainable Score Poster</Heading>
             <Link
               href="/shop"
               className="flex items-center gap-x-1 text-xs xs:text-sm sm:text-base px-2 py-1.5 font-semibold"

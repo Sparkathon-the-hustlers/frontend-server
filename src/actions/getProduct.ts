@@ -4,7 +4,7 @@ export const getPopularProduct = () =>
   safeProductFetch("api/general/products", "products");
 
 export const getCozyEveningProduct = () =>
-  safeProductFetch("api/general/products/category/lotion", "products");
+  safeProductFetch("api/general/products/category/Sustainable Fashion", "products");
 
 export const getRecommendationProduct = () =>
   safeProductFetch("api/recommendation", "recommended", true);

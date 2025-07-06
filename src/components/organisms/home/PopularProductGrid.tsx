@@ -30,7 +30,7 @@ const PopularProductGrid = ({ products, banners }: TopProductListProps) => {
       <MaxWidthWrapper>
         <ContainerBox hasBackground={true} className="space-y-4">
           <div className="flex justify-between items-center font-montserrat font-semibold text-[#2E2C2C]">
-            <Heading className="text-xl">The populars</Heading>
+            <Heading className="text-xl">The Sustainable Products</Heading>
             <Link
               href="/shop"
               className="flex items-center gap-x-1 text-xs xs:text-sm sm:text-base px-2 py-1.5 font-semibold"
