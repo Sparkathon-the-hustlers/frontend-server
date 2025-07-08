@@ -43,12 +43,12 @@ const CategoryList = ({
     <div
       ref={ref}
       className={cn(
-        "relative w-full font-montserrat font-normal flex items-center space-x-2 md:space-x-3 md:py-0 py-2.5",
+        "relative w-full font-montserrat font-normal flex items-center space-x-2 md:space-x-3 md:py-0 py-2.5 text-white",
         className
       )}
     >
       <Button
-        className="flex items-center gap-x-2 text-sm font-semibold text-eerie-black"
+        className="flex items-center gap-x-2 text-sm font-semibold text-white"
         onClick={handleButtonClick}
       >
         <Menu className="w-4 h-4" />
@@ -144,10 +144,10 @@ const CategoryList = ({
             key={category.id}
             href={`/shop/${slug}`}
             className={cn(
-              "flex items-center font-medium text-sm text-eerie-black hover:text-green-200 transition-colors duration-150 ease-in-out cursor-pointer",
+              "flex items-center font-medium text-sm",
               currentCategory === slug
-                ? "text-green-200 font-semibold"
-                : "text-eerie-black hover:text-green-200"
+                ? "bg-blue-900 text-white px-1 rounded-sm"
+                : "text-white hover:text-gray-300"
             )}
           >
             {category.categoryName}

@@ -19,7 +19,7 @@ const MainHeaderNavbar: FC<MainHeaderNavbarProps> = ({ className, style }) => {
   return (
     <div
       className={cn(
-        "flex items-center gap-x-3 xl:gap-x-6 text-eerie-black font-montserrat font-semibold text-sm",
+        "flex items-center gap-x-3 xl:gap-x-6 text-white font-montserrat font-semibold text-sm",
         className
       )}
       style={style}
@@ -28,13 +28,13 @@ const MainHeaderNavbar: FC<MainHeaderNavbarProps> = ({ className, style }) => {
 
       <Link
         href="/shop/all"
-        className="hidden xl:flex flex-col items-center group bg-blue-500 hover:bg-blue-300 py-2 px-3 rounded-lg transition-colors duration-300"
+        className="hidden xl:flex flex-col items-center group bg-blue-800 hover:bg-blue-700 py-2 px-3 rounded-lg transition-colors duration-300"
       >
         <ShoppingBag className="w-6 h-6" />
         {/* <Span className="mt-1">Shop</Span> */}
       </Link>
       <ProfileDropdown />
-      <Link href="/cart" className="flex flex-col items-center group bg-blue-500 hover:bg-blue-300 py-2 px-3 rounded-lg transition-colors duration-300">
+      <Link href="/cart" className="flex flex-col items-center group bg-blue-800 hover:bg-blue-700 py-2 px-3 rounded-lg transition-colors duration-300">
         <div className="relative">
           {cartCount !== 0 && (
             <Span

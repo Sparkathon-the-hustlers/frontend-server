@@ -27,7 +27,7 @@ export default function NotificationDropdown() {
   }, []);
 
   return (
-    <div ref={ref} className="relative text-sm bg-blue-500 hover:bg-blue-300 py-2 px-3 rounded-lg transition-colors duration-300">
+    <div ref={ref} className="relative text-sm bg-blue-800 hover:bg-blue-700 py-2 px-3 rounded-lg transition-colors duration-300">
       {/* Bell Button */}
       <div
         onClick={() => setIsOpen((prev) => !prev)}

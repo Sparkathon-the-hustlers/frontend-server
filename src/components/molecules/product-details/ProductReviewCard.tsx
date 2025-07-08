@@ -122,7 +122,7 @@ const ProductReviewCard: React.FC<ReviewCardProps> = ({ review, token }) => {
                 alt={`Review photo`}
                 className="w-27 h-27 object-cover rounded-md border border-gray-300 transition-transform transform group-hover:scale-105"
               />
-              <span className="absolute bottom-0 w-full p-1 text-center text-scarlet-red bg-[#fff1f1] opacity-80 text-xs px-1 rounded">
+              <span className="absolute bottom-0 w-full p-1 text-center text-blue-700 bg-[#fff1f1] opacity-80 text-xs px-1 rounded">
                 Review Photo
               </span>
             </div>
@@ -138,9 +138,9 @@ const ProductReviewCard: React.FC<ReviewCardProps> = ({ review, token }) => {
               disabled={isLoading}
             >
               {isLoading ? (
-                <Spinner className="text-scarlet-red" />
+                <Spinner className="text-blue-700" />
               ) : isSuccess ? (
-                <ThumbsUp className="w-4 h-4 text-scarlet-red animate-pulse" />
+                <ThumbsUp className="w-4 h-4 text-blue-700 animate-pulse" />
               ) : isError ? (
                 <ThumbsUp className="w-4 h-4 text-gray-500" />
               ) : (
@@ -156,8 +156,8 @@ const ProductReviewCard: React.FC<ReviewCardProps> = ({ review, token }) => {
           <div className="flex gap-x-2">
             <Button
               onClick={() => setShowReviewForm(!reviewForm)}
-              className="mt-1 flex items-center gap-1 bg-scarlet-red text-white px-2 py-2
-           rounded hover:bg-red-700 transition-colors duration-200 text-xs font-semibold"
+              className="mt-1 flex items-center gap-1 bg-blue-700 text-white px-2 py-2
+           rounded hover:bg-blue-600 transition-colors duration-200 text-xs font-semibold"
             >
               <Edit size={18} />
               Edit Review
@@ -165,8 +165,8 @@ const ProductReviewCard: React.FC<ReviewCardProps> = ({ review, token }) => {
             <Button
               onClick={handleDeleteReview}
               disabled={isDeleting}
-              className="mt-1 flex items-center gap-1 bg-scarlet-red text-white px-2 py-2
-           rounded hover:bg-red-700 transition-colors duration-200 text-xs font-semibold"
+              className="mt-1 flex items-center gap-1 bg-blue-700 text-white px-2 py-2
+           rounded hover:bg-blue-600 transition-colors duration-200 text-xs font-semibold"
             >
               {isDeleting ? (
                 <Spinner className="w-4 h-4" />

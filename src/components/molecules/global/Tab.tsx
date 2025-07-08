@@ -37,7 +37,7 @@ export const Tabs: React.FC<TabsProps> = ({
             onClick={() => onTabChange(tab.props.label)}
             className={`py-2 px-4 border-b-2 ${
               activeTab === tab.props.label
-                ? "border-scarlet-red text-scarlet-red"
+                ? "border-blue-700 text-blue-700"
                 : "border-transparent text-gray-500"
             }`}
             role="tab"

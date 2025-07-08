@@ -189,7 +189,7 @@ const ReviewForm: React.FC<ReviewFormProps> = ({
             <Button
               type="button"
               onClick={removeImage}
-              className="absolute top-1 right-1 bg-white text-black border border-gray-300 rounded-full p-1 text-xs hover:bg-red-500 hover:text-white transition"
+              className="absolute top-1 right-1 bg-white text-black border border-gray-300 rounded-full p-1 text-xs hover:bg-blue-600 hover:text-white transition"
             >
               <X size={18} />
             </Button>
