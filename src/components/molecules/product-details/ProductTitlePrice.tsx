@@ -33,7 +33,7 @@ const ProductTitlePrice = ({
         </div>
       </div>
       <Heading>{title}</Heading>
-      <div className="flex items-center gap-x-1 text-sm text-scarlet-red font-semibold">
+      <div className="flex items-center gap-x-1 text-sm text-green-700 font-semibold">
         <CheckSquare className="w-4 h-4" />
         <Span className="text-xs sm:text-sm">
           Recommended by 96%, 137 purchases
@@ -49,7 +49,7 @@ const ProductTitlePrice = ({
             ${originalPrice.toFixed(2)}
           </Span>
         )}
-        <Span className="text-red-500 font-bold text-xl">
+        <Span className="text-green-500 font-bold text-xl">
           ${price.toFixed(2)}
         </Span>
       </div>

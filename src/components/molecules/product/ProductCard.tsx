@@ -106,7 +106,7 @@ const ProductCard: FC<ServerProductCardProps> = ({
         }`}
       >
         {discount && (
-          <Span className="absolute top-2.5 left-2 bg-red-500 text-white text-xs px-2 py-0.5 rounded">
+          <Span className="absolute top-2.5 left-2 bg-green-500 text-white text-xs px-2 py-0.5 rounded">
             {discount}
           </Span>
         )}
@@ -116,11 +116,11 @@ const ProductCard: FC<ServerProductCardProps> = ({
           className="absolute h-8 w-8 p-1 rounded-full top-2.5 right-2 bg-white shadow disabled:opacity-70 disabled:cursor-not-allowed"
         >
           {isWishing || isUnwishing ? (
-            <Spinner className="mr-0 text-scarlet-red" />
+            <Spinner className="mr-0 text-blue-600" />
           ) : isInWishlist ? (
-            <Heart className="w-4 h-4 fill-scarlet-red text-scarlet-red" />
+            <Heart className="w-4 h-4 fill-blue-500 text-blue-500" />
           ) : (
-            <Heart className="w-4 h-4 text-scarlet-red" />
+            <Heart className="w-4 h-4 text-blue-500" />
           )}
         </Button>
         <Image
@@ -143,17 +143,17 @@ const ProductCard: FC<ServerProductCardProps> = ({
         {/* Price + Rating */}
         <div className="flex items-center justify-between mb-2">
           <div className="space-x-1">
-            <Span className="text-scarlet-red font-semibold text-base">
+            <Span className="text-blue-500 font-semibold text-base">
               ${productPrice.toFixed(2)}
             </Span>
             {originalPrice && (
-              <Span className="line-through text-gray-400 text-xs font-medium">
+              <Span className="line-through text-red-700/50 text-xs font-medium">
                 ${originalPrice.toFixed(2)}
               </Span>
             )}
           </div>
           <div className="flex items-center gap-x-1 text-gray-700 text-sm">
-            <Star className="w-4 h-4 text-scarlet-red" />
+            <Star className="w-4 h-4 text-orange-300" />
             <Span>{averageCustomerRating.toFixed(1)}</Span>
             <Span className="text-xs text-gray-400">/ 100</Span>
           </div>
@@ -164,7 +164,7 @@ const ProductCard: FC<ServerProductCardProps> = ({
           {rekognitionLabels.map((label: any, idx: any) => (
             <div
               key={idx}
-              className="flex gap-x-1 items-center bg-[#FF7D7D36] rounded-full px-2 py-0.5"
+              className="flex gap-x-1 items-center bg-blue-400/20 rounded-full px-2 py-0.5"
             >
               {label.toLowerCase().includes("best") && (
                 <Flame className="text-[#FE8800] w-3.5 h-3.5" />
@@ -174,11 +174,11 @@ const ProductCard: FC<ServerProductCardProps> = ({
           ))}
         </div>
 
-        <div className="space-y-2.5">
+        <div className="space-y-2.5 flex gap-1">
           <Button
             onClick={handleAddToCart}
             disabled={isAdding}
-            className="w-full py-1.5 flex justify-center items-center gap-x-2 transition-colors bg-scarlet-red hover:bg-red-600 text-white text-sm font-medium rounded disabled:opacity-70 disabled:cursor-not-allowed"
+            className="w-full py-1.5 flex justify-center items-center gap-x-2 transition-colors bg-blue-700 hover:bg-blue-800 text-white text-sm font-medium rounded disabled:opacity-70 disabled:cursor-not-allowed"
           >
             {isAdding ? (
               <>
@@ -194,10 +194,10 @@ const ProductCard: FC<ServerProductCardProps> = ({
           </Button>
           <Link
             href={`/shop/all/${id}`}
-            className="w-full py-1.5 flex justify-center items-center gap-x-2 bg-gray-900 transition-colors hover:bg-gray-800 text-white text-sm font-medium rounded"
+            className="w-25 py-1.5 h-8 flex justify-center items-center gap-x-2 bg-gray-900 transition-colors hover:bg-gray-700 text-white text-sm font-medium rounded"
           >
-            <View className="w-4 h-4" />
-            View Product
+            <View className="w-3 h-3" />
+            View
           </Link>
         </div>
       </div>
