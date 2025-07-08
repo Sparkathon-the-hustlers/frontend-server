@@ -40,7 +40,7 @@ export const QuantitySelector: React.FC<QuantitySelectorProps> = ({
         className="w-1/3 h-7 flex items-center justify-center text-sm font-semibold border-r border-gray-300 transition disabled:opacity-50 disabled:cursor-not-allowed"
       >
         {loading && activeButton === "dec" ? (
-          <Spinner className="text-scarlet-red/100 mr-0" />
+          <Spinner className="text-blue-700/100 mr-0" />
         ) : (
           <Minus className="w-4 h-4" />
         )}
@@ -59,7 +59,7 @@ export const QuantitySelector: React.FC<QuantitySelectorProps> = ({
         className="w-1/3 h-7 flex items-center justify-center text-sm font-semibold text-black transition disabled:opacity-50 disabled:cursor-not-allowed"
       >
         {loading && activeButton === "inc" ? (
-          <Spinner className="text-scarlet-red/100 mr-0" />
+          <Spinner className="text-blue-700/100 mr-0" />
         ) : (
           <Plus className="w-4 h-4" />
         )}

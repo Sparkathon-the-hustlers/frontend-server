@@ -43,6 +43,7 @@ const ProductCard: FC<ServerProductCardProps> = ({
     averageCustomerRating = 0,
     coverImageUrl,
     rekognitionLabels = [],
+    greenScore,
   } = product;
 
   const isInWishlist = wishlistData?.wishlist.some(
@@ -160,7 +161,7 @@ const ProductCard: FC<ServerProductCardProps> = ({
         </div>
 
         {/* Tags/Labels */}
-        <div className="flex flex-wrap gap-1.5 mb-2">
+        {/* <div className="flex flex-wrap gap-1.5 mb-2">
           {rekognitionLabels.map((label: any, idx: any) => (
             <div
               key={idx}
@@ -172,6 +173,17 @@ const ProductCard: FC<ServerProductCardProps> = ({
               <Span className="text-xs text-gray-700">{label}</Span>
             </div>
           ))}
+        </div> */}
+
+        <div className="flex items-center gap-x-2 mb-2">
+          <Span className="font-semibold text-gray-700">Sustainability Score:</Span>
+          <Span
+            className={`font-bold px-1 py-0.5 rounded 
+              ${greenScore <= 30 ? "bg-red-100 text-red-600" : greenScore >= 70 ? "bg-green-100 text-green-700" : "bg-yellow-100 text-yellow-700"}
+            `}
+          >
+            {greenScore}
+          </Span>
         </div>
 
         <div className="space-y-2.5 flex gap-1">

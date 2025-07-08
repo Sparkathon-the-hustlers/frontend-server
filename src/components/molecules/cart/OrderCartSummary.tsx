@@ -76,7 +76,7 @@ export const OrderSummary: React.FC<OrderSummaryProps> = ({
       {selectedAddressId && (
         <Button
           onClick={onCheckout}
-          className="mt-6 w-full flex gap-x-2 justify-center items-center bg-scarlet-red text-white py-3 rounded-lg font-semibold"
+          className="mt-6 w-full flex gap-x-2 justify-center items-center bg-blue-700 text-white py-3 rounded-lg font-semibold"
         >
           {isCheckoutLoading ? (
             <>

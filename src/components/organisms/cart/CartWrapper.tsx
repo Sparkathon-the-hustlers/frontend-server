@@ -164,7 +164,7 @@ const CartWrapper: React.FC = () => {
                 )}
 
                 {isAddressError && (
-                  <div className="text-red-600 text-sm font-medium">
+                  <div className="text-blue-600 text-sm font-medium">
                     Failed to load shipping addresses. Please try again later.
                   </div>
                 )}
@@ -181,7 +181,7 @@ const CartWrapper: React.FC = () => {
                         onClick={() => setSelectedAddressId(address.id)}
                         className={`cursor-pointer border rounded-lg p-5 bg-white transition-colors duration-200 ${
                           isSelected
-                            ? "border-scarlet-red ring-2 ring-scarlet-red"
+                            ? "border-blue-700 ring-2 ring-blue-700"
                             : "border-gray-200"
                         }`}
                       >
@@ -234,7 +234,7 @@ const CartWrapper: React.FC = () => {
                             )}
 
                             {isSelected && (
-                              <span className="text-xs font-medium bg-red-100 text-red-600 px-2 py-1 rounded">
+                              <span className="text-xs font-medium bg-red-100 text-blue-600 px-2 py-1 rounded">
                                 Selected
                               </span>
                             )}
@@ -283,7 +283,7 @@ const CartWrapper: React.FC = () => {
               </div>
             </>
           ) : isCartError ? (
-            <p className="text-center text-red-500">Failed to load cart.</p>
+            <p className="text-center text-blue-500">Failed to load cart.</p>
           ) : cart.length === 0 ? (
             <div className="flex flex-col items-center justify-center">
               <ShoppingCart className="w-12 h-12 text-gray-400 mb-2" />
@@ -297,7 +297,7 @@ const CartWrapper: React.FC = () => {
               </p>
               <Link
                 href="/shop/all"
-                className="mt-4 inline-flex gap-x-2 items-center px-4 py-2 bg-scarlet-red hover:bg-red-600 transition-colors text-white text-sm font-medium rounded"
+                className="mt-4 inline-flex gap-x-2 items-center px-4 py-2 bg-blue-700 hover:bg-blue-600 transition-colors text-white text-sm font-medium rounded"
               >
                 Shop Now <MoveRight />
               </Link>
@@ -326,7 +326,7 @@ const CartWrapper: React.FC = () => {
                     </div>
                     <Button
                       onClick={handleDeleteAll}
-                      className="bg-scarlet-red flex items-center justify-center gap-2 text-white px-3 py-2 rounded-md font-semibold transition disabled:opacity-70 disabled:cursor-not-allowed"
+                      className="bg-blue-700 flex items-center justify-center gap-2 text-white px-3 py-2 rounded-md font-semibold transition disabled:opacity-70 disabled:cursor-not-allowed"
                       disabled={isBulkDeleting}
                     >
                       {isBulkDeleting ? (

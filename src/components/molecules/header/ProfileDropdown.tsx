@@ -125,7 +125,7 @@ export default function ProfileDropdown() {
             <li onClick={handleLinkClick}>
               <Link
                 href="/signup"
-                className="flex items-center px-4 py-2 text-gray-700 hover:bg-scarlet-red hover:text-white transition-colors"
+                className="flex items-center px-4 py-2 text-gray-600 hover:bg-blue-600 hover:text-white rounded-lg transition-colors"
               >
                 <UserPlus className="mr-2 w-5 h-5" />
                 Sign Up
@@ -134,7 +134,7 @@ export default function ProfileDropdown() {
             <li onClick={handleLinkClick}>
               <Link
                 href="/login"
-                className="flex items-center px-4 py-2 text-gray-700 hover:bg-scarlet-red hover:text-white transition-colors"
+                className="flex items-center px-4 py-2 text-gray-600 hover:bg-blue-600 hover:text-white rounded-lg transition-colors"
               >
                 <LogIn className="mr-2 w-5 h-5" />
                 Login
@@ -146,14 +146,14 @@ export default function ProfileDropdown() {
             <li onClick={handleLinkClick}>
               <Link
                 href="/dashboard"
-                className="flex w-full items-center px-4 py-2 text-gray-600 hover:bg-gray-100 hover:text-gray-700 transition-colors"
+                className="flex w-full items-center px-4 py-2 text-gray-600 hover:bg-blue-600 hover:text-white rounded-lg transition-colors"
               >
                 <User className="mr-2 w-5 h-5" />
                 Profile
               </Link>
             </li>
             <li onClick={handleLogout}>
-              <button className="flex w-full items-center px-4 py-2 text-gray-600 hover:bg-gray-100 hover:text-gray-700 transition-colors cursor-pointer">
+              <button className="flex w-full items-center px-4 py-2 text-gray-600 hover:bg-blue-600 hover:text-white rounded-lg transition-colors cursor-pointer">
                 <LogOut className="mr-2 w-5 h-5" />
                 Logout
               </button>
