@@ -9,12 +9,12 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        authBtn:
-          "w-full bg-scarlet-red text-white py-2 rounded-md hover:bg-red-600 transition duration-200 font-semibold text-sm md:text-base",
+        authBtn://changes the autbtn color from red to blue
+          "w-full bg-blue-700 text-white py-2 rounded-md hover:bg-blue-600 transition duration-200 font-semibold text-sm md:text-base",
         subtle:
           "border border-input bg-accent/20 hover:bg-white/10 hover:text-accent-foreground",
         resetBtn:
-          "text-xs px-2 py-1 bg-scarlet-red font-medium text-white rounded",
+          "text-xs px-2 py-1 bg-blue-700 hover:bg-blue-600 font-medium text-white rounded",
       },
       size: {
         default: "h-10 px-4 py-2",

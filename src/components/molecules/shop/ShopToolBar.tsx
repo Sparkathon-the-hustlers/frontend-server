@@ -27,7 +27,7 @@ const ShopToolBar = () => {
         onClick={() => handleViewChange("grid")}
         className={`p-2 rounded-md border transition-all ${
           viewMode === "grid"
-            ? "bg-scarlet-red border-[#fff1f1] text-white"
+            ? "bg-blue-700 border-[#fff1f1] text-white"
             : "border-gray-300"
         }`}
       >
@@ -38,7 +38,7 @@ const ShopToolBar = () => {
         onClick={() => handleViewChange("list")}
         className={`p-2 rounded-md border transition-all ${
           viewMode === "list"
-            ? "bg-scarlet-red border-[#fff1f1] text-white"
+            ? "bg-blue-700 border-[#fff1f1] text-white"
             : "border-gray-300"
         }`}
       >

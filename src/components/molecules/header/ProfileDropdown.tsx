@@ -82,7 +82,7 @@ export default function ProfileDropdown() {
   }, [searchParams, dispatch]);
 
   return (
-    <div ref={ref} className="relative text-sm cursor-pointer bg-blue-500 hover:bg-blue-300 py-2 px-3 rounded-lg transition-colors duration-300">
+    <div ref={ref} className="relative text-sm cursor-pointer bg-blue-800 hover:bg-blue-700 py-2 px-3 rounded-lg transition-colors duration-300">
       {/* Profile Button */}
       <div
         onClick={() => setIsOpen((prev) => !prev)}
@@ -90,7 +90,7 @@ export default function ProfileDropdown() {
         className="flex flex-col items-center group"
       >
         {isLoggedIn && user ? (
-          <>
+          <div className="flex gap-1 w-auto items-center justify-center px-1">
             <Image
               src={user.profileImage || "/user.jpg"}
               alt="User Avatar"
@@ -98,8 +98,8 @@ export default function ProfileDropdown() {
               width={40}
               height={40}
             />
-            <Span className="mt-1 hidden xl:block">{user.name}</Span>
-          </>
+            <Span className="mt-1 hidden xl:block">{user.name.split(' ').slice(0, 8).join(' ')}</Span>
+          </div>
         ) : (
           <>
             <User className="w-6 h-6" />
@@ -146,14 +146,14 @@ export default function ProfileDropdown() {
             <li onClick={handleLinkClick}>
               <Link
                 href="/dashboard"
-                className="flex w-full items-center px-4 py-2 text-red-600 hover:bg-gray-100 hover:text-red-700 transition-colors"
+                className="flex w-full items-center px-4 py-2 text-gray-600 hover:bg-gray-100 hover:text-gray-700 transition-colors"
               >
                 <User className="mr-2 w-5 h-5" />
                 Profile
               </Link>
             </li>
             <li onClick={handleLogout}>
-              <button className="flex w-full items-center px-4 py-2 text-red-600 hover:bg-gray-100 hover:text-red-700 transition-colors cursor-pointer">
+              <button className="flex w-full items-center px-4 py-2 text-gray-600 hover:bg-gray-100 hover:text-gray-700 transition-colors cursor-pointer">
                 <LogOut className="mr-2 w-5 h-5" />
                 Logout
               </button>

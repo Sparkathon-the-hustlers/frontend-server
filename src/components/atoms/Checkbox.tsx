@@ -24,7 +24,7 @@ export const Checkbox: React.FC<CheckboxProps> = ({
       />
       <span
         className={`w-4 h-4 flex items-center justify-center border rounded mr-1
-          ${checked ? "bg-red-500 border-red-500" : "border-gray-400"}
+          ${checked ? "bg-blue-700 border-blue-500" : "border-gray-400"}
           transition-all duration-200`}
       >
         {checked && (

@@ -188,7 +188,7 @@ const ProductDetailsWrapper: React.FC<ProductDetailsWrapperProps> = ({
                     {product.productTags.split(" ").map((tag, index) => (
                       <span
                         key={index}
-                        className="bg-[#FFECEC] text-[#FE5E5E] text-xs font-semibold py-1 px-3 rounded-lg"
+                        className="bg-blue-700/10 text-blue-700 text-xs font-semibold py-1 px-3 rounded-lg"
                       >
                         {tag}
                       </span>
