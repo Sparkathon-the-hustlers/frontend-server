@@ -17,13 +17,9 @@ const Logo: FC<LogoProps> = ({ className, style, handler }) => {
       style={style}
     >
       <Link href="/" className="flex items-center">
-        <Image
-          src="/logo.svg"
-          alt="logo"
-          width={202}
-          height={31}
-          className="w-[150px] object-cover xl:w-auto"
-        />
+        <div className="relative h-14 w-40">
+          <Image src="/logo.svg" alt="logo" fill className="object-contain" />
+        </div>
       </Link>
     </div>
   );

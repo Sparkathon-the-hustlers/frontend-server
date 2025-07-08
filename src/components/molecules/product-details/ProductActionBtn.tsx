@@ -8,7 +8,7 @@ const ActionBtn = () => {
     <div className="flex flex-col sm:flex-row gap-3 font-semibold w-full">
       <Link
         href="/checkout"
-        className="whitespace-nowrap text-sm font-medium ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:shrink-0 cursor-pointer flex items-center justify-center gap-2 flex-1 bg-scarlet-red text-white px-4 py-2 rounded-md transition-all duration-200 ease-in-out hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-400 active:scale-95"
+        className="whitespace-nowrap text-sm font-medium ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:shrink-0 cursor-pointer flex items-center justify-center gap-2 flex-1 bg-blue-700 text-white px-4 py-2 rounded-md transition-all duration-200 ease-in-out hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-red-400 active:scale-95"
         aria-label="Buy Now"
       >
         <CreditCard size={18} />

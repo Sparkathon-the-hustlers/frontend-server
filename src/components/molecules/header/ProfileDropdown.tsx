@@ -82,7 +82,7 @@ export default function ProfileDropdown() {
   }, [searchParams, dispatch]);
 
   return (
-    <div ref={ref} className="relative text-sm cursor-pointer">
+    <div ref={ref} className="relative text-sm cursor-pointer bg-blue-500 hover:bg-blue-300 py-2 px-3 rounded-lg transition-colors duration-300">
       {/* Profile Button */}
       <div
         onClick={() => setIsOpen((prev) => !prev)}
@@ -103,7 +103,7 @@ export default function ProfileDropdown() {
         ) : (
           <>
             <User className="w-6 h-6" />
-            <Span className="mt-1 hidden xl:block">Profile</Span>
+            {/* <Span className="mt-1 hidden xl:block">Profile</Span> */}
           </>
         )}
       </div>

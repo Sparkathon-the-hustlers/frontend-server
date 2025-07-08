@@ -28,13 +28,13 @@ const MainHeaderNavbar: FC<MainHeaderNavbarProps> = ({ className, style }) => {
 
       <Link
         href="/shop/all"
-        className="hidden xl:flex flex-col items-center group"
+        className="hidden xl:flex flex-col items-center group bg-blue-500 hover:bg-blue-300 py-2 px-3 rounded-lg transition-colors duration-300"
       >
         <ShoppingBag className="w-6 h-6" />
-        <Span className="mt-1">Shop</Span>
+        {/* <Span className="mt-1">Shop</Span> */}
       </Link>
       <ProfileDropdown />
-      <Link href="/cart" className="flex flex-col items-center group">
+      <Link href="/cart" className="flex flex-col items-center group bg-blue-500 hover:bg-blue-300 py-2 px-3 rounded-lg transition-colors duration-300">
         <div className="relative">
           {cartCount !== 0 && (
             <Span
@@ -47,7 +47,7 @@ const MainHeaderNavbar: FC<MainHeaderNavbarProps> = ({ className, style }) => {
           )}
           <ShoppingCart className="w-6 h-6" />
         </div>
-        <Span className="mt-1 hidden xl:block">Shopping Cart</Span>
+        {/* <Span className="mt-1 hidden xl:block">Shopping Cart</Span> */}
       </Link>
     </div>
   );

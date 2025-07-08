@@ -81,7 +81,7 @@ const MainHeaderSearchBar: FC<MainHeaderSearchBarProps> = ({
   return (
     <div
       className={cn(
-        "flex items-center bg-[#fff1f1] font-roboto rounded-xl border border-[#F5282814] relative",
+        "flex items-center bg-[#ececec] font-roboto rounded-xl border border-[#F5282814] relative",
         className
       )}
       style={style}
@@ -89,7 +89,7 @@ const MainHeaderSearchBar: FC<MainHeaderSearchBarProps> = ({
       {/* Mobile Icon */}
       {mode === "mobile" && (
         <Button className="pl-3">
-          <Search className="w-5 h-5 text-scarlet-red" />
+          <Search className="w-5 h-5 text-blue-800" />
         </Button>
       )}
 
@@ -100,14 +100,14 @@ const MainHeaderSearchBar: FC<MainHeaderSearchBarProps> = ({
           onChange={handleChange}
           onBlur={handleBlur}
           onFocus={handleFocus}
-          className="relative z-10 bg-transparent text-scarlet-red placeholder-transparent text-sm flex-1 outline-none border-none h-12 font-normal placeholder:[letter-spacing:0.05em] transition-all duration-500 w-full"
+          className="relative z-10 bg-transparent text-blue-800 placeholder-transparent text-sm flex-1 outline-none border-none h-12 font-normal placeholder:[letter-spacing:0.05em] transition-all duration-500 w-full"
           placeholder=" "
           onKeyDown={(e) => {
             if (e.key === "Enter") handleManualSearch();
           }}
         />
         {searchTerm.length === 0 && (
-          <span className="absolute left-4 top-1/2 transform -translate-y-1/2 text-sm text-scarlet-red pointer-events-none animated-placeholder flex items-center" />
+          <span className="absolute left-4 top-1/2 transform -translate-y-1/2 text-sm text-blue-800 pointer-events-none animated-placeholder flex items-center" />
         )}
       </div>
 
@@ -133,11 +133,11 @@ const MainHeaderSearchBar: FC<MainHeaderSearchBarProps> = ({
       {/* Image Upload Button */}
       <label
         className={cn(
-          "cursor-pointer flex items-center justify-center w-12 h-12 text-scarlet-red transition-all duration-200",
+          "cursor-pointer flex items-center justify-center w-12 h-12 text-green-800 transition-all duration-200",
           mode === "desktop"
             ? isLoading
-              ? "bg-scarlet-red/80"
-              : "bg-[#ffe5e5] hover:bg-[#ffcccc]"
+              ? "bg-blue-800/80"
+              : "bg-[#d4d6ee] hover:bg-[#c5c4f1]"
             : "bg-transparent"
         )}
       >
@@ -145,7 +145,7 @@ const MainHeaderSearchBar: FC<MainHeaderSearchBarProps> = ({
           <Spinner
             className={cn(
               "mr-0",
-              mode !== "desktop" ? "text-scarlet-red" : "text-white"
+              mode !== "desktop" ? "text-blue-800" : "text-white"
             )}
           />
         ) : (
@@ -170,7 +170,7 @@ const MainHeaderSearchBar: FC<MainHeaderSearchBarProps> = ({
         <Button
           onClick={handleManualSearch}
           disabled={searching}
-          className="bg-scarlet-red text-white text-sm font-semibold w-16 xl:w-24 rounded-l-none rounded-r-xl cursor-pointer h-12 hover:bg-red-700 transition-all duration-200 disabled:opacity-70 disabled:cursor-not-allowed"
+          className="bg-blue-900 text-white text-sm font-semibold w-16 xl:w-24 rounded-l-none rounded-r-xl cursor-pointer h-12 hover:bg-blue-800 transition-all duration-200 disabled:opacity-70 disabled:cursor-not-allowed"
         >
           {searching ? (
             <Spinner className="w-4 h-4 text-white" />

@@ -12,14 +12,13 @@ import { Category } from "@/types/category";
 
 const HeaderWrapper = ({ categories }: { categories: Category[] }) => {
   return (
-    <header className="space-y-3 xl:space-y-2 mb-4 backdrop-blur-sm xl:mb-8 sticky w-full top-0 no-scrollbar z-30 bg-white  xl:shadow-sm">
+    <header className="space-y-1 xl:space-y-1 backdrop-blur-sm xl:mb-3 sticky w-full top-0 no-scrollbar z-30 xl:shadow-sm bg-blue-600">
       <MaxWidthWrapper>
         <ContainerBox
-          className="space-y-3 px-0 py-0 xl:py-1.5 xl:px-0
-        "
+          className="space-y-3 px-0 py-0 xl:py-2 xl:px-0 h-[65px]"
         >
           {/* Top Header*/}
-          <TopHeader />
+          {/* <TopHeader /> */}
           {/* Main Header*/}
           <div className="flex items-center justify-between">
             {/* Logo */}
@@ -32,13 +31,13 @@ const HeaderWrapper = ({ categories }: { categories: Category[] }) => {
               <MainHeaderSearchBar mode="desktop" />
             </div>
             {/* Main Nav */}
-            <MainHeaderNavbar className="justify-center" />
+            <MainHeaderNavbar className="justify-between w-[300px] " />
           </div>
         </ContainerBox>
       </MaxWidthWrapper>
       <div className="xl:border-t-2 xl:border-t-scarlet-red">
         <MaxWidthWrapper>
-          <ContainerBox className="xl:px-0 px-0 py-0 xl:py-4">
+          <ContainerBox className="xl:px-0 px-0 py-0 xl:py-2">
             <div className="hidden xl:block">
               <CategoryList categories={categories} />
             </div>

@@ -46,7 +46,7 @@ const ProductDisplayCard: FC<ProductDisplayCardProps> = ({
         }`}
       >
         {discount && (
-          <Span className="absolute top-2.5 left-2 bg-red-500 text-white text-xs px-2 py-0.5 rounded">
+          <Span className="absolute top-2.5 left-2 bg-green-500 text-white text-xs px-2 py-0.5 rounded">
             {discount}
           </Span>
         )}
@@ -73,7 +73,7 @@ const ProductDisplayCard: FC<ProductDisplayCardProps> = ({
         {/* Price + Rating */}
         <div className="flex items-center justify-between mb-2">
           <div className="space-x-1">
-            <Span className="text-scarlet-red font-semibold text-base">
+            <Span className="text-blue-500 font-semibold text-base">
               ${price.toFixed(2)}
             </Span>
             {originalPrice && (
