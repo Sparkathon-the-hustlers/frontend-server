@@ -20,7 +20,7 @@ export const PromoCodeInput: React.FC<PromoCodeInputProps> = ({ onApply }) => {
       />
       <Button
         onClick={() => onApply(code)}
-        className="bg-scarlet-red px-3 py-2 text-white rounded-lg font-semibold"
+        className="bg-blue-700 px-3 py-2 text-white rounded-lg font-semibold"
       >
         Apply
       </Button>

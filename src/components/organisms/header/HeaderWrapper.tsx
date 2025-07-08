@@ -31,7 +31,7 @@ const HeaderWrapper = ({ categories }: { categories: Category[] }) => {
               <MainHeaderSearchBar mode="desktop" />
             </div>
             {/* Main Nav */}
-            <MainHeaderNavbar className="justify-between w-[300px] " />
+            <MainHeaderNavbar className="justify-between w-[450px] " />
           </div>
         </ContainerBox>
       </MaxWidthWrapper>

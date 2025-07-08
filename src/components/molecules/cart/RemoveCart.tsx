@@ -15,10 +15,10 @@ export const RemoveCart: React.FC<RemoveIconProps> = ({
   return (
     <Button
       onClick={onClick}
-      className="border border-gray-300 px-2 rounded text-scarlet-red"
+      className="border border-gray-300 px-2 rounded text-blue-700"
     >
       {isRemoving ? (
-        <Spinner className="text-scarlet-red/100 mr-0" />
+        <Spinner className="text-sblue-700/100 mr-0" />
       ) : (
         <X className="w-5 h-5 font-semibold" />
       )}

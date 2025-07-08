@@ -2,10 +2,12 @@ import React, { FC } from "react";
 import Link from "next/link";
 import Span from "@/components/atoms/Span";
 import { cn } from "@/utils/cn";
-import { ShoppingBag, ShoppingCart } from "lucide-react";
+import { ShoppingBag, ShoppingCart, Coins } from "lucide-react";
 import ProfileDropdown from "./ProfileDropdown";
 import { useGetCartSummaryQuery } from "@/store/api/cartApi";
 import NotificationDropdown from "./NotificationDropdown";
+import { useSelector } from "react-redux";
+import { RootState } from "@/store/store";
 
 interface MainHeaderNavbarProps {
   className?: string;
@@ -15,6 +17,7 @@ interface MainHeaderNavbarProps {
 const MainHeaderNavbar: FC<MainHeaderNavbarProps> = ({ className, style }) => {
   const { data } = useGetCartSummaryQuery();
   const cartCount = data?.cart?.CartItems?.length ?? 0;
+  const isLoggedIn = useSelector((state: RootState) => state.user.isLoggedIn);
 
   return (
     <div
@@ -49,6 +52,12 @@ const MainHeaderNavbar: FC<MainHeaderNavbarProps> = ({ className, style }) => {
         </div>
         {/* <Span className="mt-1 hidden xl:block">Shopping Cart</Span> */}
       </Link>
+
+      {isLoggedIn && (
+          <div className="flex flex-col items-center group bg-blue-800 hover:bg-blue-700 py-2 px-3 rounded-lg transition-colors duration-300">
+            <Coins className="w-6 h-6 text-green-500" />
+          </div>
+        )}
     </div>
   );
 };

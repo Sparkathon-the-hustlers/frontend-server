@@ -44,16 +44,16 @@ const SignupWrapper = () => {
           type="button"
           onClick={handleGoogleLogin}
           className="flex-1 flex items-center justify-center gap-2 border border-gray-300 rounded-md px-4 py-2 text-sm lg:text-base 
-               hover:bg-light-gray hover:border-scarlet-red transition-all duration-200"
+               hover:bg-light-gray hover:border-blue-700 transition-all duration-200"
         >
           <Google /> Google
         </Button>
 
-        <Button
+        {/* <Button
           type="button"
           onClick={handleFacebookLogin}
           className="flex-1 flex items-center justify-center gap-2 border border-gray-300 rounded-md px-4 py-2 text-sm lg:text-base 
-               hover:bg-light-gray hover:border-scarlet-red transition-all duration-200"
+               hover:bg-light-gray hover:border-blue-700 transition-all duration-200"
         >
           <Facebook className="text-[#087aea]" /> Facebook
         </Button>
@@ -62,10 +62,10 @@ const SignupWrapper = () => {
           type="button"
           onClick={handletwitterLogin}
           className="flex-1 flex items-center justify-center gap-2 border border-gray-300 rounded-md px-4 py-2 text-sm lg:text-base 
-               hover:bg-light-gray hover:border-scarlet-red transition-all duration-200"
+               hover:bg-light-gray hover:border-blue-700 transition-all duration-200"
         >
           <X /> Twitter
-        </Button>
+        </Button> */}
       </div>
 
       <p className="flex justify-center items-center text-xs text-gray-500 mt-4">

@@ -99,7 +99,7 @@ const HeroCarousel = ({ banners }: { banners: Banner[] }) => {
           <Button
             key={index}
             className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full transition-all duration-300 ${
-              index === selectedIndex ? "bg-scarlet-red scale-125" : "bg-white"
+              index === selectedIndex ? "bg-blue-700 scale-125" : "bg-white"
             }`}
             onClick={() => emblaApi?.scrollTo(index)}
           />
