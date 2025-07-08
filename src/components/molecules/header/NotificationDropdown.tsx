@@ -27,7 +27,7 @@ export default function NotificationDropdown() {
   }, []);
 
   return (
-    <div ref={ref} className="relative text-sm">
+    <div ref={ref} className="relative text-sm bg-blue-500 hover:bg-blue-300 py-2 px-3 rounded-lg transition-colors duration-300">
       {/* Bell Button */}
       <div
         onClick={() => setIsOpen((prev) => !prev)}
@@ -35,7 +35,7 @@ export default function NotificationDropdown() {
         className="flex flex-col items-center group cursor-pointer"
       >
         <Bell className="w-6 h-6" />
-        <Span className="mt-1 hidden xl:block">Notifications</Span>
+        {/* <Span className="mt-1 hidden xl:block">Notifications</Span> */}
       </div>
 
       {/* Dropdown */}

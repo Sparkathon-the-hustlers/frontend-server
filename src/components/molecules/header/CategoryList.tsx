@@ -85,9 +85,9 @@ const CategoryList = ({
                 <Link
                   href={`/shop/${slugify(category.categoryName)}`}
                   className={cn(
-                    "flex items-center justify-between px-4 py-3 text-gray-700 hover:bg-scarlet-red hover:text-white transition-colors duration-150 ease-in-out",
+                    "flex items-center justify-between px-4 py-3 text-gray-700 hover:bg-blue-700 hover:text-white transition-colors duration-150 ease-in-out",
                     currentCategory === slug
-                      ? "text-scarlet-red font-semibold"
+                      ? "text-blue-600 font-semibold"
                       : "text-eerie-black"
                   )}
                 >
@@ -114,7 +114,7 @@ const CategoryList = ({
                 {cat.subcategories.map((sub) => (
                   <li
                     key={sub.id}
-                    className="text-gray-700 py-1 hover:text-scarlet-red transition-colors duration-150 ease-in-out cursor-pointer"
+                    className="text-gray-700 py-1 hover:text-green-500 transition-colors duration-150 ease-in-out cursor-pointer"
                     onClick={() => setIsOpen(false)}
                   >
                     <Link
@@ -123,8 +123,8 @@ const CategoryList = ({
                       )}`}
                       className={cn(
                         currentSubcategory === slugify(sub.categoryName)
-                          ? "text-scarlet-red font-semibold"
-                          : "text-gray-700 hover:text-scarlet-red"
+                          ? "text-green-700 font-semibold"
+                          : "text-gray-700 hover:text-green-700"
                       )}
                     >
                       {sub.categoryName}
@@ -144,10 +144,10 @@ const CategoryList = ({
             key={category.id}
             href={`/shop/${slug}`}
             className={cn(
-              "flex items-center font-medium text-sm text-eerie-black hover:text-scarlet-red transition-colors duration-150 ease-in-out cursor-pointer",
+              "flex items-center font-medium text-sm text-eerie-black hover:text-green-200 transition-colors duration-150 ease-in-out cursor-pointer",
               currentCategory === slug
-                ? "text-scarlet-red font-semibold"
-                : "text-eerie-black hover:text-scarlet-red"
+                ? "text-green-200 font-semibold"
+                : "text-eerie-black hover:text-green-200"
             )}
           >
             {category.categoryName}
