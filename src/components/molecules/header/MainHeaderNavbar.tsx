@@ -18,6 +18,7 @@ const MainHeaderNavbar: FC<MainHeaderNavbarProps> = ({ className, style }) => {
   const { data } = useGetCartSummaryQuery();
   const cartCount = data?.cart?.CartItems?.length ?? 0;
   const isLoggedIn = useSelector((state: RootState) => state.user.isLoggedIn);
+  const user = useSelector((state: RootState) => state.user.userInfo);
 
   return (
     <div
@@ -54,8 +55,9 @@ const MainHeaderNavbar: FC<MainHeaderNavbarProps> = ({ className, style }) => {
       </Link>
 
       {isLoggedIn && (
-          <div className="flex flex-col items-center group bg-blue-800 hover:bg-blue-700 py-2 px-3 rounded-lg transition-colors duration-300">
+          <div className="flex items-center group bg-blue-800 hover:bg-blue-700 py-2 px-3 rounded-lg transition-colors duration-300 gap-1">
             <Coins className="w-6 h-6 text-green-500" />
+            <Span>{user?.greenPoint}</Span>
           </div>
         )}
     </div>
