@@ -5,6 +5,7 @@ type User = {
   email: string;
   profileImage?: string;
   userId?: number;
+  greenPoint?: string;
 };
 
 type UserState = {

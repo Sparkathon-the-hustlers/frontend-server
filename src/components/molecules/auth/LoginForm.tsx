@@ -49,6 +49,7 @@ export default function LoginForm() {
           email: response.user.email,
           profileImage: response.user.profilePhoto,
           userId: response.user.id,
+          greenPoint: response.user.greenPoint,
         })
       );
       toast.success(response.message || "Login successful!");
