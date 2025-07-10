@@ -44,8 +44,8 @@ const ProductImageGallery: React.FC<EmblaCarouselProps> = ({ slides }) => {
                     }`}
                     src={source}
                     alt={`Thumbnail ${index}`}
-                    height={80}
-                    width={80}
+                    height={100}
+                    width={100}
                   />
                 </button>
               </div>
@@ -55,7 +55,7 @@ const ProductImageGallery: React.FC<EmblaCarouselProps> = ({ slides }) => {
       </div>
 
       {/* Main carousel */}
-      <div className="pl-0 md:pl-2 flex-grow relative">
+      <div className="pl-0 md:pl-2 flex-grow relative h-[70%]">
         {Array.isArray(slides) && slides.length > 1 && (
           <>
             <div className="absolute inset-y-0 left-0 z-10 flex items-center">
@@ -93,7 +93,7 @@ const ProductImageGallery: React.FC<EmblaCarouselProps> = ({ slides }) => {
           <div className="flex h-full select-none">
             {slides.map((source, index) => (
               <div
-                className="relative flex-[0_0_100%] h-[200px] sm:h-[300px] md:h-auto"
+                className="relative flex-[0_0_100%] h-[200px] sm:h-[300px] md:h-auto py-[10%]"
                 key={index}
               >
                 <Image

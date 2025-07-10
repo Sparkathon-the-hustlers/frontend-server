@@ -1,9 +1,63 @@
+"use client";
 import { Button } from "@/components/atoms/Button";
-import React from "react";
-import { ShoppingCart, CreditCard } from "lucide-react";
+import React, { useState } from "react";
+import { ShoppingCart, CreditCard, Coins } from "lucide-react";
 import Link from "next/link";
+import toast from "react-hot-toast";
 
-const ActionBtn = () => {
+interface ActionBtnProps {
+  productId?: number;
+  quantity?: number;
+  token?: string | undefined;
+  addressId?: number;
+}
+
+const ActionBtn: React.FC<ActionBtnProps> = ({ productId, quantity = 1, token, addressId }) => {
+  const [isLoading, setIsLoading] = useState(false);
+
+  const handleBuyFromCoins = async () => {
+    if (!productId) {
+      toast.error("Product not found");
+      return;
+    }
+
+    setIsLoading(true);
+    
+    try {
+      if (!token) {
+        toast.error("Please login first");
+        setIsLoading(false);
+        return;
+      }
+
+      const response = await fetch("http://localhost:9000/api/user/order/buy-now-from-green-point", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Authorization": `Bearer ${token}`,
+        },
+        body: JSON.stringify({
+          productId: productId,
+          quantity: quantity,
+          addressId: addressId,
+        }),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        toast.success(`Order placed successfully! Order ID: ${data.orderId}`);
+      } else {
+        toast.error(data.message || "Failed to place order");
+      }
+    } catch (error) {
+      console.error("Error placing order:", error);
+      toast.error("Something went wrong. Please try again.");
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
   return (
     <div className="flex flex-col sm:flex-row gap-3 font-semibold w-full">
       <Link
@@ -15,11 +69,13 @@ const ActionBtn = () => {
         Buy Now
       </Link>
       <Button
-        className="flex items-center justify-center gap-2 flex-1 bg-black text-white px-4 py-2 rounded-md transition-all duration-200 ease-in-out hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-500 active:scale-95"
-        aria-label="Add to Cart"
+        onClick={handleBuyFromCoins}
+        disabled={isLoading}
+        className="flex items-center justify-center gap-2 flex-1 bg-green-600 text-white px-4 py-2 rounded-md transition-all duration-200 ease-in-out hover:bg-green-500 focus:outline-none focus:ring-2 focus:ring-gray-500 active:scale-95 disabled:opacity-50"
+        aria-label="Buy from Coins"
       >
-        <ShoppingCart size={18} />
-        Add to Cart
+        <Coins size={18} />
+        {isLoading ? "Processing..." : "Buy from Coins"}
       </Button>
     </div>
   );

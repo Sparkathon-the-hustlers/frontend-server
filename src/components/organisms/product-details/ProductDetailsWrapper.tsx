@@ -32,6 +32,8 @@ import SkeletonTabs from "@/components/molecules/global/SkeletonTabs";
 import EstimateDeliveryDate from "@/components/molecules/product-details/EstimateDeliveryDate";
 import { setProductId } from "@/store/slices/product-details/productSetIdSlice";
 
+import { useGetShippingAddressQuery } from "@/store/api/userDashboardApi"; // Import useGetShippingAddressQuery
+
 interface ProductDetailsWrapperProps {
   token: string | undefined;
   id: string;
@@ -59,6 +61,13 @@ const ProductDetailsWrapper: React.FC<ProductDetailsWrapperProps> = ({
   const [addReview] = useAddReviewMutation();
 
   const product = data?.product;
+
+  const { data: addressesData } = useGetShippingAddressQuery(); // Fetch shipping addresses
+
+  // Determine the selected address ID
+  const selectedAddressId = addressesData?.addresses?.find(
+    (address) => address.isDefault
+  )?.id || addressesData?.addresses?.[0]?.id;
 
   useEffect(() => {
     if (!product?.id) return;
@@ -168,7 +177,12 @@ const ProductDetailsWrapper: React.FC<ProductDetailsWrapperProps> = ({
                 <EstimateDeliveryDate {...deliveryData} />
               )}
 
-              <ProductActionBtn />
+              <ProductActionBtn 
+                productId={product.id} 
+                quantity={1}
+                token={token}
+                addressId={selectedAddressId}
+              />
             </div>
           </div>
         </ContainerBox>
