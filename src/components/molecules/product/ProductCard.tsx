@@ -2,7 +2,7 @@
 "use client";
 import { Button } from "@/components/atoms/Button";
 import Span from "@/components/atoms/Span";
-import { Flame, Heart, ShoppingCart, Star, View } from "lucide-react";
+import {  Heart, ShoppingCart, Star, View } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { FC } from "react";
@@ -42,7 +42,6 @@ const ProductCard: FC<ServerProductCardProps> = ({
     productDiscountPercentage = 0,
     averageCustomerRating = 0,
     coverImageUrl,
-    rekognitionLabels = [],
     greenScore,
   } = product;
 

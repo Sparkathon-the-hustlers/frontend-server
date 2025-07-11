@@ -1,7 +1,7 @@
 "use client";
 import { Button } from "@/components/atoms/Button";
 import React, { useState } from "react";
-import { ShoppingCart, CreditCard, Coins } from "lucide-react";
+import {  CreditCard, Coins } from "lucide-react";
 import Link from "next/link";
 import toast from "react-hot-toast";
 

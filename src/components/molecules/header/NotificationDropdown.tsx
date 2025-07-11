@@ -5,7 +5,6 @@ import { format } from "date-fns";
 import Image from "next/image";
 import { Bell } from "lucide-react";
 import { cn } from "@/utils/cn";
-import Span from "@/components/atoms/Span";
 
 export default function NotificationDropdown() {
   const [isOpen, setIsOpen] = useState(false);
