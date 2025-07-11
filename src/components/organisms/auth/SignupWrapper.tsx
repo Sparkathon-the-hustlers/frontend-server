@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { Facebook, Google, X } from "@/assets/icon";
+import {  Google } from "@/assets/icon";
 import { Button } from "@/components/atoms/Button";
 import SignupForm from "@/components/molecules/auth/SignupForm";
 import { ChevronDown } from "lucide-react";
@@ -12,13 +12,7 @@ const SignupWrapper = () => {
     console.log("Google login clicked");
     window.location.href = `${process.env.NEXT_PUBLIC_API_URL}/api/auth/google`;
   };
-  const handleFacebookLogin = () => {
-    window.location.href = `${process.env.NEXT_PUBLIC_API_URL}/api/auth/facebook`;
-  };
-  const handletwitterLogin = () => {
-    window.location.href = `${process.env.NEXT_PUBLIC_API_URL}/api/auth/twitter`;
-  };
-
+  
   return (
     <div className="font-montserrat w-full max-w-md mx-auto p-4 md:p-8 bg-white rounded-lg shadow-md">
       <FormHeader>Create an account</FormHeader>

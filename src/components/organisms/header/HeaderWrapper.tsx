@@ -1,6 +1,5 @@
 "use client";
 import React from "react";
-import TopHeader from "@/components/organisms/header/TopHeader";
 import MaxWidthWrapper from "@/components/layout/MaxWidthWrapper";
 import ContainerBox from "@/components/layout/ContainerBox";
 import CategoryList from "@/components/molecules/header/CategoryList";
